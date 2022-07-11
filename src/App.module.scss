@@ -7,11 +7,13 @@
 
 .content {
   width: 1160px;
+  overflow-x: hidden;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   &Inner {
     display: flex;
     align-items: center;
@@ -32,6 +34,22 @@
 
 .box {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 40px;
+  transition-duration: 200ms;
+}
+
+@media (max-width: 1160px) {
+  .content {
+    width: 860px;
+  }
+}
+@media (max-width: 860px) {
+  .content {
+    width: 560px;
+  }
+}
+@media (max-width: 560px) {
+  .content {
+    width: 300px;
+  }
 }
